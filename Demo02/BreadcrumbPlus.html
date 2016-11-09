@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>面包屑导航</title>
+    <style type="text/css">
+    #crumbs ul li {
+        float: left;
+        list-style-type: none;
+        border-left: 1px solid gray;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        /*border-right: 1px solid black;*/
+    }
+    
+    #crumbs ul li {
+        display: block;
+        float: left;
+        height: 30px;
+        background: transparent;
+        text-align: center;
+        padding: 10px 50px 0 50px;
+        position: relative;
+        margin: 0 10px 0 0;
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    /*#crumbs ul li:after {
+        content: "";
+        border-top: 21px solid transparent;
+        border-bottom: 21px solid transparent;
+        border-left: 21px solid black;
+        position: absolute;
+        right: -21px;
+        top: -1px;
+        z-index: 5;
+    }*/
+    
+    #crumbs ul li:after {
+        content: "";
+        position: absolute;
+        border-top: 1px solid gray;
+        border-right: 1px solid gray;
+        width: 29px;
+        height: 29px;
+        right: -15px;
+        top: 5px;
+        z-index: 5;
+        transform: rotate(45deg);
+        color: black;
+        background: transparent;
+    }
+    /*#crumbs ul li:after {
+        content: "1"
+        border: 1px solid black;
+        height: 40px;
+        width: 40px;
+        float: left;
+        background: black;
+        position: relative;
+        transform: rotate(45deg);
+        right: -21px;
+        top: -1px;
+        z-index: 5;
+    }*/
+    /*#crumbs ul li:before {
+        content: "";
+        border-top: 20px solid #3498db;
+        border-bottom: 20px solid #3498db;
+        border-left: 20px solid white;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+*/
+    
+    #crumbs ul li:before {
+        content: "";
+        position: absolute;
+        border-top: 1px solid gray;
+        border-right: 1px solid gray;
+        width: 29px;
+        height: 29px;
+        left: -15px;
+        top: 5px;
+        transform: rotate(45deg);
+        color: black;
+        background: white;
+    }
+    
+    #crumbs ul li:first-child {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    
+    #crumbs ul li:first-child:before {
+        display: none;
+    }
+    
+    #crumbs ul li:last-child {
+        padding-right: 60px;
+        border-right: 1px solid gray;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    
+    #crumbs ul li:last-child:after {
+        display: none;
+    }
+    
+    #crumbs ul li:hover {
+        /*background: #fa5ba5;*/
+        border-left: 1px solid #3498db;
+        /*border-right: 1px solid #3498db;*/
+        border-top: 1px solid #3498db;
+        border-bottom: 1px solid #3498db;
+    }
+    
+    #crumbs ul li:hover:after {
+        /*background: #fa5ba5;*/
+        border-right: 1px solid #3498db;
+        border-top: 1px solid #3498db;
+    }
+    
+    #crumbs ul li:hover:before {
+        border-right: 1px solid #3498db;
+        border-top: 1px solid #3498db;
+    }
+    
+    #crumbs ul li:hover:last-child {
+        border-right: 1px solid #3498db;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="crumbs">
+        <ul>
+            <li>导航栏1</li>
+            <li>导航栏2</li>
+            <li>导航栏3</li>
+            <li>导航栏4</li>
+        </ul>
+    </div>
+</body>
+
+</html>
